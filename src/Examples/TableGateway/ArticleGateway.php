@@ -31,7 +31,7 @@ class ArticleGateway {
 
         return $this
             ->entityManager
-            ->createNativeQuery("SELECT * FROM article a", $rsm)
+            ->createNativeQuery("SELECT a FROM article a", $rsm)
             ->getResult()
         ;
     }

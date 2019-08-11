@@ -4,7 +4,7 @@
 namespace App\Examples\TableGateway;
 
 /**
- * Запись в таблице article.
+ * Запись в таблице article (уровень данных).
  * Не содержит доменной логики, отражает только структуру таблицы в БД.
  */
 class Article {
