@@ -15,3 +15,8 @@
 ###> PHPStorm ###
 /.idea/
 ###< PHPStorm ###
+
+###> override global php and composer ###
+composer.bat
+php.bat
+###< override global php and composer ###
