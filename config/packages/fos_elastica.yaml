@@ -1,6 +1,23 @@
 # Read the documentation: https://github.com/FriendsOfSymfony/FOSElasticaBundle/blob/master/Resources/doc/setup.md
 fos_elastica:
     clients:
-        default: { host: localhost, port: 9200 }
+        default: { host: localhost, port: 9300 }
     indexes:
-        app: null
+        app:
+          types:
+            article:
+              properties:
+                title:
+                  type: text
+                content:
+                  type: text
+              persistence:
+                driver: orm
+                model: App\Entity\Article
+                provider:
+                  batch_size: 50
+                finder: ~
+                listener:
+                  insert: true
+                  update: true
+                  delete: true
